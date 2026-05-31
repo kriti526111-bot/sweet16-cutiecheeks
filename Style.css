@@ -1,60 +1,203 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #ffd6ec, #f3d9ff);
-  text-align: center;
-  color: #ff4fa3;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(to bottom,#ffd6ec,#f5d8ff);
+  overflow-x:hidden;
 }
 
-.hero {
-  padding: 40px 20px;
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:60px 20px 20px;
 }
 
-.hero h1 {
-  font-size: 60px;
+.hero-box{
+  background:white;
+  width:fit-content;
+  margin:auto;
+  padding:30px 50px;
+  border-radius:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-.hero h2 {
-  font-size: 40px;
-  color: #b14fff;
+.hero h1{
+  margin:0;
+  font-size:60px;
+  color:#ff4fa3;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  padding: 30px;
+.hero h2{
+  margin-top:10px;
+  color:#b14fff;
+  font-size:40px;
 }
 
-.card {
-  background: white;
-  width: 250px;
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.subtitle{
+  margin-top:30px;
+  color:#8c4ac7;
+  font-size:20px;
 }
 
-.number {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* CARDS */
+
+.cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:40px;
+  padding:50px 20px;
 }
 
-input {
-  width: 90%;
-  padding: 10px;
-  border-radius: 20px;
-  border: 2px solid pink;
-  margin-top: 15px;
+.card{
+  width:280px;
+  background:white;
+  border-radius:35px;
+  padding:30px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
 }
 
-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  background: hotpink;
-  color: white;
-  cursor: pointer;
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.candle{
+  width:10px;
+  height:50px;
+  background:#ff9ed1;
+  margin:auto;
+  border-radius:20px;
+  position:absolute;
+  top:-45px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.candle::before{
+  content:"🔥";
+  position:absolute;
+  top:-25px;
+  left:-8px;
+  font-size:25px;
+}
+
+.cake-top{
+  width:90px;
+  height:90px;
+  background:#ffe4f2;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:35px;
+  font-weight:bold;
+  color:#ff4fa3;
+}
+
+.card h3{
+  color:#7b3ebf;
+  margin-top:25px;
+  min-height:50px;
+}
+
+.hint-btn{
+  background:none;
+  border:none;
+  color:#ff4fa3;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.password-box{
+  margin-top:20px;
+  background:#fff0f7;
+  border-radius:30px;
+  display:flex;
+  padding:10px;
+}
+
+.password-box input{
+  flex:1;
+  border:none;
+  background:none;
+  outline:none;
+  padding-left:10px;
+}
+
+.password-box button{
+  border:none;
+  background:#b14fff;
+  color:white;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* LETTER */
+
+.letter-preview{
+  padding:50px 20px 80px;
+}
+
+.letter-paper{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:50px;
+  border-radius:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+.letter-paper h2{
+  color:#ff4fa3;
+  font-size:40px;
+}
+
+.letter-paper p{
+  color:#555;
+  line-height:1.8;
+  font-size:18px;
+}
+
+.letter-paper button{
+  margin-top:20px;
+  border:none;
+  padding:15px 30px;
+  border-radius:40px;
+  background:linear-gradient(to right,#ff4fa3,#b14fff);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* SPARKLES */
+
+.sparkles::before,
+.sparkles::after{
+  content:"✨ ✦ ✨ ✦ ✨";
+  position:fixed;
+  width:100%;
+  text-align:center;
+  color:#ff9ed1;
+  font-size:25px;
+  animation:float 6s linear infinite;
+}
+
+.sparkles::after{
+  top:60%;
+}
+
+@keyframes float{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-20px);
+  }
 }
